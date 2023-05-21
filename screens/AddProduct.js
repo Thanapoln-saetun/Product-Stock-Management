@@ -54,7 +54,7 @@ const AddProduct = () => {
             const docRef = await addDoc(collection(db, 'stocks'), data);
             resetForm();
             setIsLoading(false);
-            navigation.navigate('StockDetail');
+            navigation.navigate('Product Detail');
         } catch (error) {
             console.error('Error adding document:', error);
             setIsLoading(false);

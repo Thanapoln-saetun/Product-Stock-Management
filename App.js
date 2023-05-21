@@ -49,7 +49,7 @@ export default function App() {
                     name="add-circle-outline"
                     size={30}
                     color="#fff"
-                    onPress={() => navigation.navigate('AddStockScreen')}
+                    onPress={() => navigation.navigate('Add Product')}
                   />
                 </View>
               );

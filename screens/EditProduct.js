@@ -7,7 +7,6 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import app from '../firebase';
 import * as ImagePicker from 'expo-image-picker';
 
-
 const EditProduct = ({ selectedStock, onCloseModal, onUpdate }) => {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [resetImage, setResetImage] = useState(false);

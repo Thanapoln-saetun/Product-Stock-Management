@@ -148,9 +148,15 @@ const StockOut = () => {
                     />
                   </View>
                 </View>
+                {amount > 0 ? (
                 <TouchableOpacity style={styles.modalAddButton} onPress={addStock}>
                   <Text style={styles.modalAddButtonText}>Out Stock</Text>
                 </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity style={[styles.modalAddButton, { backgroundColor: '#ccc' }]} disabled={true} onPress={addStock} >
+                    <Text style={styles.modalAddButtonText}>Disabled</Text>
+                  </TouchableOpacity>
+                )}
               </>
             )}
             <TouchableOpacity style={styles.closeButton} onPress={closeModal}>

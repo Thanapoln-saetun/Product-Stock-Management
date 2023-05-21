@@ -72,7 +72,7 @@ const Dashboard = () => {
                     <View>
                         {sortedStocks.map(stock => (
                             stock.stockStatus === 'outStock' ? (
-                                <TouchableOpacity onPress={() => navigation.navigate('StockOut')}>
+                                <TouchableOpacity onPress={() => navigation.navigate('Stock Out')}>
                                     <ListItem key={stock.id} bottomDivider>
                                         {stock.imageUrl ? (
                                             <Avatar rounded source={{ uri: stock.imageUrl }} />
@@ -108,7 +108,7 @@ const Dashboard = () => {
                                     </ListItem>
                                 </TouchableOpacity>
                             ) : stock.stockStatus === 'inStock' ? (
-                                <TouchableOpacity onPress={() => navigation.navigate('StockIn')}>
+                                <TouchableOpacity onPress={() => navigation.navigate('Stock In')}>
                                     <ListItem key={stock.id} bottomDivider>
                                         {stock.imageUrl ? (
                                             <Avatar rounded source={{ uri: stock.imageUrl }} />
@@ -156,7 +156,7 @@ const Dashboard = () => {
                 return (
                     <>
                         {sortedNewStocks.map(stock => (
-                            <TouchableOpacity onPress={() => navigation.navigate('StockIn')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('Stock In')}>
                                 <ListItem key={stock.id} bottomDivider>
                                     {stock.imageUrl ? (
                                         <Avatar rounded source={{ uri: stock.imageUrl }} />
@@ -202,7 +202,7 @@ const Dashboard = () => {
                 return (
                     <View>
                         {sortedOutStocks.map(stock => (
-                            <TouchableOpacity onPress={() => navigation.navigate('StockIn')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('Stock In')}>
                                 <ListItem key={stock.id} bottomDivider>
                                     {stock.imageUrl ? (
                                         <Avatar rounded source={{ uri: stock.imageUrl }} />
@@ -260,7 +260,7 @@ const Dashboard = () => {
                         footerValue="for month"
                         iconImageSource={require("../assets/arrow.png")}
                         style={{ backgroundColor: "#027f00", height: 168 }}
-                        onPress={() => navigation.navigate('StockIn')}
+                        onPress={() => navigation.navigate('Stock In')}
                     />
                     <ColorfulCard
                         title="Stock Out"
@@ -270,7 +270,7 @@ const Dashboard = () => {
                         footerValue="for month"
                         style={{ backgroundColor: "#f70c16", height: 168 }}
                         iconImageSource={require("../assets/drow.png")}
-                        onPress={() => navigation.navigate('StockOut')}
+                        onPress={() => navigation.navigate('Stock Out')}
                     />
                 </View>
                 <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', paddingLeft: 12, paddingRight: 12 }}>
@@ -281,7 +281,7 @@ const Dashboard = () => {
                         footerValue="for all"
                         iconImageSource={require("../assets/boxes.png")}
                         style={{ backgroundColor: "#3695e0", width: '100%', height: 168 }}
-                        onPress={() => navigation.navigate('StockDetail')}
+                        onPress={() => navigation.navigate('Product Details')}
                     />
                 </View>
                 <TabView
