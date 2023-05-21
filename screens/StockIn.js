@@ -47,7 +47,7 @@ const StockIn = () => {
     try {
       const db = getFirestore(app);
       const stockRef = doc(db, 'stocks', selectedStock.id);
-      const newStockIn = (selectedStock.stockOut || 0) + amount; // เพิ่มค่า amount เข้าไปใน stockIn
+      const newStockIn = (selectedStock.stockOut || 0) + amount;
       const TotalPrice = selectedStock.salesPrice * (selectedStock.quantity + amount);
       await updateDoc(stockRef, {
         stockStatus: 'inStock',
