@@ -86,7 +86,7 @@ const Dashboard = () => {
                                         <ListItem.Content>
                                             <ListItem.Title>
                                                 {stock.name}
-                                                <Text style={{ color: 'green' }}> {stock.salesPrice}฿</Text>
+                                                <Text style={{ color: 'green' }}> {stock.salesPrice.toLocaleString()}฿</Text>
                                             </ListItem.Title>
                                             <ListItem.Subtitle style={{ color: '#808080' }}>
                                                 {stock.timeStampUpdatedStock
@@ -122,7 +122,7 @@ const Dashboard = () => {
                                         <ListItem.Content>
                                             <ListItem.Title>
                                                 {stock.name}
-                                                <Text style={{ color: 'green' }}> {stock.salesPrice}฿</Text>
+                                                <Text style={{ color: 'green' }}> {stock.salesPrice.toLocaleString()}฿</Text>
                                             </ListItem.Title>
                                             <ListItem.Subtitle style={{ color: '#808080' }}>
                                                 {stock.timeStampUpdatedStock
@@ -170,7 +170,7 @@ const Dashboard = () => {
                                     <ListItem.Content>
                                         <ListItem.Title>
                                             {stock.name}
-                                            <Text style={{ color: 'green' }}> {stock.salesPrice}฿</Text>
+                                            <Text style={{ color: 'green' }}> {stock.salesPrice.toLocaleString()}฿</Text>
                                         </ListItem.Title>
                                         <ListItem.Subtitle style={{ color: '#808080' }}>
                                             <Text style={{ color: 'gray' }}>{stock.description}</Text>
@@ -216,7 +216,7 @@ const Dashboard = () => {
                                     <ListItem.Content>
                                         <ListItem.Title>
                                             {stock.name}
-                                            <Text style={{ color: 'green' }}> {stock.salesPrice}฿</Text>
+                                            <Text style={{ color: 'green' }}> {stock.salesPrice.toLocaleString()}฿</Text>
                                         </ListItem.Title>
                                         <ListItem.Subtitle style={{ color: '#808080' }}>
                                             <Text style={{ color: 'gray' }}>{stock.description}</Text>
@@ -256,7 +256,7 @@ const Dashboard = () => {
                         title="Stock In"
                         value={stockInTotal || 0}
                         valuePostfix="Items"
-                        footerTitle={priceTotalStockIn ? `Total ${priceTotalStockIn} Bath` : 0 + ' Bath'}
+                        footerTitle={priceTotalStockIn ? `Total ${priceTotalStockIn.toLocaleString()} Bath` : 0 + ' Bath'}
                         footerValue="for month"
                         iconImageSource={require("../assets/arrow.png")}
                         style={{ backgroundColor: "#027f00", height: 168 }}
@@ -266,7 +266,7 @@ const Dashboard = () => {
                         title="Stock Out"
                         value={stockOutTotal || 0}
                         valuePostfix="Items"
-                        footerTitle={priceTotalStockOut ? `Total ${priceTotalStockOut} Bath` : 0 + ' Bath'}
+                        footerTitle={priceTotalStockOut ? `Total ${priceTotalStockOut.toLocaleString()} Bath` : 0 + ' Bath'}
                         footerValue="for month"
                         style={{ backgroundColor: "#f70c16", height: 168 }}
                         iconImageSource={require("../assets/drow.png")}
@@ -277,7 +277,7 @@ const Dashboard = () => {
                     <ColorfulCard
                         title="Total Stock"
                         value={quantityTotal ? `${quantityTotal} Items` : 0}
-                        footerTitle={totalPrice ? `Total ${totalPrice} Bath` : 0}
+                        footerTitle={totalPrice ? `Total ${totalPrice.toLocaleString()} Bath` : 0}
                         footerValue="for all"
                         iconImageSource={require("../assets/boxes.png")}
                         style={{ backgroundColor: "#3695e0", width: '100%', height: 168 }}

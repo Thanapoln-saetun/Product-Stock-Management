@@ -3,8 +3,8 @@ import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import AddStockScreen from './screens/AddStockScreen';
-import StockDetail from './screens/StockDetail';
+import AddProduct from './screens/AddProduct';
+import ProductDetail from './screens/ProductDetail';
 import StockOut from './screens/StockOut';
 import StockIn from './screens/StockIn';
 import Dashboard from './screens/Dashboard';
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="AddStockScreen"
+        initialRouteName="AddProduct"
         screenOptions={({ route, navigation }) => ({
           unmountOnBlur: true,
           headerTintColor: 'transparent',
@@ -42,7 +42,7 @@ export default function App() {
             </View>
           ),
           headerRight: () => {
-            if (route.name === 'StockDetail') {
+            if (route.name === 'Product Detail') {
               return (
                 <View style={{ marginRight: 30 }}>
                   <Ionicons
@@ -67,15 +67,15 @@ export default function App() {
           },
           tabBarIcon: ({ color, size }) => {
             let iconName;
-            if (route.name === 'StockIn') {
+            if (route.name === 'Stock In') {
               iconName = 'add-circle-outline';
             } else if (route.name === 'Dashboard') {
               iconName = 'grid-outline';
-            } else if (route.name === 'StockOut') {
+            } else if (route.name === 'Stock Out') {
               iconName = 'remove-circle-outline';
-            } else if (route.name === 'AddStockScreen') {
+            } else if (route.name === 'Add Product') {
               iconName = 'cube-outline';
-            } else if (route.name === 'StockDetail') {
+            } else if (route.name === 'Product Detail') {
 
               iconName = 'file-tray-stacked-outline';
             }
@@ -91,11 +91,11 @@ export default function App() {
           },
         }}
       >
-        <Tab.Screen name="StockIn" component={StockIn} />
-        <Tab.Screen name="AddStockScreen" component={AddStockScreen} />
+        <Tab.Screen name="Stock In" component={StockIn} />
+        <Tab.Screen name="Add Product" component={AddProduct} />
         <Tab.Screen name="Dashboard" component={Dashboard} />
-        <Tab.Screen name="StockDetail" component={StockDetail} />
-        <Tab.Screen name="StockOut" component={StockOut} />
+        <Tab.Screen name="Product Detail" component={ProductDetail} />
+        <Tab.Screen name="Stock Out" component={StockOut} />
       </Tab.Navigator>
     </NavigationContainer>
   );

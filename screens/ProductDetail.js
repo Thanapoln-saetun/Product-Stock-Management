@@ -6,7 +6,7 @@ import app from '../firebase';
 import EditProduct from './EditProduct';
 
 
-const StockDetail = () => {
+const ProductDetail = () => {
   const [stockData, setStockData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedStock, setSelectedStock] = useState(null);
@@ -181,4 +181,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default StockDetail;
+export default ProductDetail;

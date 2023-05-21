@@ -178,7 +178,7 @@ const ProductCard = ({ item, setModalVisible, setSelectedStock }) => {
           <Text style={styles.productName}>{item.name}</Text>
           <Text style={styles.productDescription}>{item.description}</Text>
           <Text style={styles.productPrice}>
-            {item.salesPrice} ฿ <Text style={styles.productPriceText}>per item</Text>
+            {item.salesPrice.toLocaleString()} ฿ <Text style={styles.productPriceText}>per item</Text>
           </Text>
         </View>
         <View style={styles.productQuantity}>

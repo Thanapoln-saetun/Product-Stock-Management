@@ -8,7 +8,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import InputSpinner from "react-native-input-spinner";
 import { useNavigation } from '@react-navigation/native';
 
-const AddStockScreen = () => {
+const AddProduct = () => {
     const navigation = useNavigation();
     const storage = getStorage(app);
     const [imageUrl, setImageUrl] = useState(null);
@@ -220,4 +220,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AddStockScreen;
+export default AddProduct;
