@@ -1,2 +1,7 @@
 # Product-Stock-Management
-Product-Stock-Management is a React Native project for inventory management and tracking. It allows users to record and manage stock quantities, check product statuses, and generate stock reports. The README provides installation and usage instructions.
+Product-Stock-Management is a React Native project for inventory management and tracking. It allows users to record and manage stock quantities, check product statuses, and generate stock reports.
+
+# Features
+- **Record and manage stock quantities:** Easily add new products to the inventory and update their stock quantities as needed.
+- **Check product statuses:** View detailed information about each product, including its availability and current stock level.
+- **Generate stock reports:** Generate comprehensive reports to analyze stock levels, identify trends, and make informed business decisions.
