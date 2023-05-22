@@ -7,4 +7,4 @@ Product-Stock-Management is a React Native project for inventory management and 
 - **Dashboard stock:** Access a comprehensive dashboard to analyze stock levels, identify trends, and make informed business decisions
 
 # Screenshots
-![Product Stock Management](https://github.com/Thanapoln-saetun/Product-Stock-Management/assets/102792578/9bcd5fb3-dc2b-4df2-b77f-e790d844c6f2)
+![Blue Modern Company Profile Presentation](https://github.com/Thanapoln-saetun/Product-Stock-Management/assets/102792578/99dc8ed7-e4bb-4d2e-8a80-0d6006a14f9c)
