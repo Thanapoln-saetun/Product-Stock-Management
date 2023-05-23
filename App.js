@@ -1,16 +1,15 @@
-import React from 'react';
-import { View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
-import AddProduct from './screens/AddProduct';
-import ProductDetail from './screens/ProductDetail';
-import StockOut from './screens/StockOut';
-import StockIn from './screens/StockIn';
-import Dashboard from './screens/Dashboard';
+import React from "react";
+import { View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Ionicons } from "@expo/vector-icons";
+import AddProduct from "./screens/AddProduct";
+import ProductDetail from "./screens/ProductDetail";
+import StockOut from "./screens/StockOut";
+import StockIn from "./screens/StockIn";
+import Dashboard from "./screens/Dashboard";
 
 const Tab = createBottomTabNavigator();
-
 export default function App() {
   return (
     <NavigationContainer>
@@ -18,18 +17,18 @@ export default function App() {
         initialRouteName="AddProduct"
         screenOptions={({ route, navigation }) => ({
           unmountOnBlur: true,
-          headerTintColor: 'transparent',
+          headerTintColor: "transparent",
           headerStyle: {
-            backgroundColor: '#3695e0',
+            backgroundColor: "#3695e0",
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
             height: 100,
           },
           headerTitleStyle: {
             fontSize: 20,
-            fontWeight: 'bold',
-            color: '#fff',
-            textAlign: 'center',
+            fontWeight: "bold",
+            color: "#fff",
+            textAlign: "center",
           },
           headerLeft: () => (
             <View style={{ marginLeft: 30 }}>
@@ -42,14 +41,14 @@ export default function App() {
             </View>
           ),
           headerRight: () => {
-            if (route.name === 'Product Detail') {
+            if (route.name === "Product Detail") {
               return (
                 <View style={{ marginRight: 30 }}>
                   <Ionicons
                     name="add-circle-outline"
                     size={30}
                     color="#fff"
-                    onPress={() => navigation.navigate('Add Product')}
+                    onPress={() => navigation.navigate("Add Product")}
                   />
                 </View>
               );
@@ -67,26 +66,25 @@ export default function App() {
           },
           tabBarIcon: ({ color, size }) => {
             let iconName;
-            if (route.name === 'Stock In') {
-              iconName = 'add-circle-outline';
-            } else if (route.name === 'Dashboard') {
-              iconName = 'grid-outline';
-            } else if (route.name === 'Stock Out') {
-              iconName = 'remove-circle-outline';
-            } else if (route.name === 'Add Product') {
-              iconName = 'cube-outline';
-            } else if (route.name === 'Product Detail') {
-
-              iconName = 'file-tray-stacked-outline';
+            if (route.name === "Stock In") {
+              iconName = "add-circle-outline";
+            } else if (route.name === "Dashboard") {
+              iconName = "grid-outline";
+            } else if (route.name === "Stock Out") {
+              iconName = "remove-circle-outline";
+            } else if (route.name === "Add Product") {
+              iconName = "cube-outline";
+            } else if (route.name === "Product Detail") {
+              iconName = "file-tray-stacked-outline";
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}
         tabBarOptions={{
-          activeTintColor: '#3695e0',
-          inactiveTintColor: 'gray',
+          activeTintColor: "#3695e0",
+          inactiveTintColor: "gray",
           tabBarStyle: {
-            backgroundColor: 'red',
+            backgroundColor: "red",
             height: 80,
           },
         }}
