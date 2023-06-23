@@ -305,7 +305,15 @@ const ProductCard = ({ item, setModalVisible, setSelectedStock }) => {
           <View style={[styles.quantityButton, { backgroundColor: "#f70c16" }]}>
             <Text style={styles.quantityButtonText}>Quantity</Text>
             <View style={styles.quantityButtonTextBox}>
-              <Text style={styles.quantityText}>{item.quantity}</Text>
+              {item.quantity === 0 ? (
+                <Text
+                  style={{ color: "red", fontSize: 13, fontWeight: "bold" }}
+                >
+                  Stock Out
+                </Text>
+              ) : (
+                <Text style={styles.quantityText}>{item.quantity}</Text>
+              )}
             </View>
             <View style={{ paddingTop: 2 }}>
               <Ionicons name="add-circle-outline" size={24} color="#fff" />

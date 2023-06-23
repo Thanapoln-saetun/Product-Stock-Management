@@ -53,7 +53,7 @@ const AddProduct = ({ navigation }) => {
       totalPrice: quantity * salesPrice,
     };
     try {
-      const docRef = await addDoc(collection(db, "stocks"), data);
+      await addDoc(collection(db, "stocks"), data);
       resetForm();
       setIsLoading(false);
       navigation.navigate("Product Detail");
